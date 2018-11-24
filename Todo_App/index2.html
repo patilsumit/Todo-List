@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    
+    <title>Todo-App-Sumit Patil</title>
+    <style>
+
+</style>
+</head>
+<body>
+    <div id="header">
+        <nav class="navbar navbar-dark bg-dark">
+             <div class="container">
+                 <a href="#" class="navbar-brand"><h1>My Task</h1></a>
+             </div>
+        </nav>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <h1><b>My ToDo List</b></h1>
+               
+                <table id="myList" style="font-size:1em" class="table table-bordered">
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Priority</th>
+                        <th>Describtion</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Report</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="addItem">
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col">
+                    <form class="card bg-primary">
+                        <div class="card-header my-3">
+                            <h4 class="text-white mb-3">Add Your Task Here</h4>
+                            <div class="form-group">
+                                <input type="text" placeholder="Task Name" class="form-control" id="taskName" required>
+                            </div>
+                            <div class="form-group">
+                            <div class="row">
+                            <div class="dropdown col-6">
+                            <input type="button" class="form-control dropbtn" id="taskCat" value="Add Category" onclick="myFunction(this.id)" >
+                            <div id="myDropdown1" class="dropdown-content">
+                                <a onclick="myFunction1(this.id)" id="Personal">Personal</a>
+                                <a onclick="myFunction1(this.id)" id="Official">Official</a>
+                                <a onclick="myFunction1(this.id)" id="Event">Event</a>
+                                <a onclick="myFunction1(this.id)" id="Fittness">Fittness</a>
+                                <a onclick="myFunction1(this.id)" id="Birthday">Birthday</a>
+                            </div>
+                            </div>
+                            <div class="form-group dropdown col-6">
+                            <input type="button" class="form-control dropbtn" id="taskPriority" value="Priority" onclick="myFunction(this.id)" >
+                            <div id="myDropdown2" class="dropdown-content">
+                                <a onclick="myFunction2(this.id)" id="High">High</a>
+                                <a onclick="myFunction2(this.id)" id="Medium">Medium</a>
+                                <a onclick="myFunction2(this.id)" id="Low">Low</a>
+                            </div>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <textarea id="describtion" class="form-control" placeholder="Brief Describtion About Your Task" required></textarea>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-danger text-white w-50" onclick="addTask()" id="add">Add Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="app1.js"></script>
+</body>
+
+</html>
+
